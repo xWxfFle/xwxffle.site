@@ -28,7 +28,7 @@ const View = forwardRef(
         <Three>
           <ViewImpl track={localRef}>
             {children}
-            {orbit && <OrbitControls />}
+            {orbit && <OrbitControls enablePan={false}/>}
           </ViewImpl>
         </Three>
       </>

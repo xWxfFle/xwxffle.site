@@ -1,11 +1,12 @@
 'use client'
 
-import { useGLTF } from '@react-three/drei'
+import { Float, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useMemo, useRef, useState } from 'react'
 import { Line, useCursor } from '@react-three/drei'
 import { useRouter } from 'next/navigation'
+import { ReactLogo } from './assets/ReactLogo'
 
 export const Logo = ({ route = '/blob', ...props }) => {
   const mesh = useRef<THREE.Group>(null)
@@ -36,6 +37,18 @@ export const Logo = ({ route = '/blob', ...props }) => {
         <meshPhysicalMaterial roughness={0} color={hovered ? 'hotpink' : '#1fb2f5'} />
       </mesh>
     </group>
+  )
+}
+
+export function Logof() {
+  return (
+    <Float
+      speed={1} // Animation speed, defaults to 1
+      rotationIntensity={2} // XYZ rotation intensity, defaults to 1
+      floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+    >
+      <ReactLogo />
+    </Float>
   )
 }
 

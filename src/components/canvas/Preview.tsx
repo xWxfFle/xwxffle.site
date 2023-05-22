@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 
 const sheet = getProject('Targets Project', {state: projectState}).sheet('Targets Sheet')
 
-export const Intro = () => {
+export const Preview = () => {
    useEffect(() => {
      sheet.project.ready.then(() => sheet.sequence.play())
    }, [])
