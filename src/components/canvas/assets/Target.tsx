@@ -34,4 +34,4 @@ export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: str
   )
 }
 
-useGLTF.preload('target.gltf')
+useGLTF.preload('/target.gltf')

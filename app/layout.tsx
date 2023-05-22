@@ -1,15 +1,20 @@
 import { Layout } from '@/components/dom/Layout'
 import '@/global.css'
 import { PropsWithChildren } from 'react'
+import { Rammetto_One } from 'next/font/google'
+
+const inter = Rammetto_One({ weight: '400', subsets: ['latin'] })
+
+ 
 
 export const metadata = {
-  title: 'Next.js + Three.js',
-  description: 'A minimal starter for Nextjs + React-three-fiber and Threejs.',
+  title: 'Arseniy Filatov - Dev',
+  description: 'Creative frontend developer.',
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang='en' className='antialiased'>
+    <html lang='en' className={`antialiased ${inter.className}`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
