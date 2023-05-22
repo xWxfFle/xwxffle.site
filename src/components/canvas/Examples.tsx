@@ -42,11 +42,7 @@ export const Logo = ({ route = '/blob', ...props }) => {
 
 export function Logof() {
   return (
-    <Float
-      speed={1} // Animation speed, defaults to 1
-      rotationIntensity={2} // XYZ rotation intensity, defaults to 1
-      floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
-    >
+    <Float rotationIntensity={2}>
       <ReactLogo />
     </Float>
   )
