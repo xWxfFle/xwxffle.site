@@ -20,23 +20,20 @@ type GLTFResult = GLTF & {
 export function ReactLogo(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF('/react-logo.gltf') as GLTFResult
   const mesh = useRef<THREE.Group>(null)
-  const [hovered, hover] = useState(false)
-
-  useCursor(hovered)
-  useFrame((state, delta) => {
-    const t = state.clock.getElapsedTime()
+  useFrame(() => {
     if (!mesh.current) return
+    mesh.current.rotation.y += 0.005
+    mesh.current.rotation.x -= 0.005
+     mesh.current.rotation.z -= 0.005
   })
 
   return (
-    <Float rotationIntensity={2}>
+   
       <group
         {...props}
         dispose={null}
         ref={mesh}
-        scale={2}
-        onPointerOver={() => hover(true)}
-        onPointerOut={() => hover(false)}
+        scale={1.8}
       >
         <mesh
           castShadow
@@ -79,7 +76,6 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
           </mesh>
         </mesh>
       </group>
-    </Float>
   )
 }
 

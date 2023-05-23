@@ -36,7 +36,7 @@ export function About() {
           </p>
         </div>
         <div className='h-96 w-full px-6 md:my-12  lg:w-2/6'>
-          <View className='rounded-box h-full w-full bg-base-300' orbit>
+          <View className='rounded-box h-full w-full bg-base-300'>
             <ReactLogo />
             <Common position={[0, 0, 5]} />
           </View>
