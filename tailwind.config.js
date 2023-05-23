@@ -3,7 +3,12 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'], // remove unused styles in production
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ['var(--font-nunito)'],
+        rammeto: ['var(--font-rammeto)'],
+      },
+    },
   },
   variants: {
     extend: {},
@@ -23,7 +28,7 @@ module.exports = {
 
           'base-100': '#1C8259',
 
-          info: '#7fbecc',
+          info: '#1fb2f5',
 
           success: '#b7e064',
 
