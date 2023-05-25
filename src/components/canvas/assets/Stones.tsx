@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 export function Stones(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
   const { nodes, materials } = useGLTF('/stones.gltf') as GLTFResult
   return (
-    <e.group {...props} dispose={null} theatreKey={props.theatreKey}>
+    <e.group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow

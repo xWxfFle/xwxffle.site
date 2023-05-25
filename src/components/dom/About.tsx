@@ -1,8 +1,8 @@
 'use client'
 import { Loading } from '@/components/canvas/Loading'
 import dynamic from 'next/dynamic'
+import { Keyboard } from '../canvas/assets/Keyboard'
 
-const Preview = dynamic(() => import('@/components/canvas/Preview').then((mod) => mod.Preview), { ssr: false })
 const ReactLogo = dynamic(() => import('@/components/canvas/assets/ReactLogo').then((mod) => mod.ReactLogo), {
   ssr: false,
 })
@@ -22,17 +22,15 @@ export function About() {
         <div className=' h-full w-full p-6 text-xl md:my-12 md:mb-40 lg:w-2/6'>
           <p className='mb-4 font-rammeto text-xl uppercase'>01</p>
           <h2 className='mb-4 text-4xl font-bold leading-tight'>About me</h2>
-          <p className='mb-4 text-xl leading-normal'>
-            I`m a 17 y.o. creative frontend developer from Rostov-on-Don, Russia.
-          </p>
-          <p className='mb-4  leading-normal'>
-            In 2021 I started my career as a <span className='text-info'>Node.js</span> trainee developer at a
-            blockchain company. I continued to improve my skills and became interested in frontend.
-          </p>
-          <p className=' leading-normal'>
-            For the year 2022, I have mastered <span className='text-info'>React</span> and{' '}
-            <span className='text-info'>Next.js</span>. Also, I like to develop WebGL applications using{' '}
-            <span className='text-info'>Three.js</span> with <span className='text-info'>React Three Fiber</span>.
+          <p className='mb-8  leading-normal'>
+            I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia with a year of commercial experience. I
+            started my career in 2021 as a trainee <span className='text-info'>Node.js</span> developer for a company
+            working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my
+            focus and began mastering <span className='text-info'>React</span> and{' '}
+            <span className='text-info'>TypeScript</span> in 2022. These days I use{' '}
+            <span className='text-info'>Next.js</span> for project development and also enjoys creating WebGL
+            applications using <span className='text-info'>Three.js</span> and{' '}
+            <span className='text-info'>React Three Fiber</span>.
           </p>
         </div>
         <div className='h-96 w-full px-6 md:my-12  lg:w-2/6'>
@@ -76,7 +74,7 @@ export function About() {
           </div>
 
           <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-300'>
-            <div className='collapse-title inline-flex items-center font-rammeto text-xl'>
+            <div className='collapse-title inline-flex items-center text-xl'>
               <h3>Other</h3>
             </div>
             <div className='collapse-content'>

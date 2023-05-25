@@ -24,7 +24,7 @@ type GLTFResult = GLTF & {
 export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: string}) {
   const { nodes, materials } = useGLTF('/target.gltf') as GLTFResult
   return (
-    <e.group {...props} dispose={null} theatreKey={props.theatreKey}>
+    <e.group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh castShadow receiveShadow geometry={nodes.Cylinder016.geometry} material={materials['Red.025']} />
         <mesh castShadow receiveShadow geometry={nodes.Cylinder016_1.geometry} material={materials['White.025']} />

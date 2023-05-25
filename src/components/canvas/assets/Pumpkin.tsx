@@ -23,7 +23,7 @@ type GLTFResult = GLTF & {
 export function Pumpkin(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
   const { nodes, materials } = useGLTF('/pumpkin.gltf') as GLTFResult
   return (
-    <e.group {...props} dispose={null} theatreKey={props.theatreKey}>
+    <e.group {...props} dispose={null}>
       <group position={[0, 1.21, 0]} scale={1.5}>
         <mesh castShadow receiveShadow geometry={nodes.Sphere018.geometry} material={materials['Orange.008']} />
         <mesh castShadow receiveShadow geometry={nodes.Sphere018_1.geometry} material={materials.GreenDark} />

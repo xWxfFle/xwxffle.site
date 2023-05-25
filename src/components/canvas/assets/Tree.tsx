@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 export function Tree(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
   const { nodes, materials } = useGLTF('/tree.gltf') as GLTFResult
   return (
-    <e.group {...props} dispose={null} theatreKey={props.theatreKey}>
+    <e.group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes['tree-spruce'].geometry} material={materials.color_main} />
     </e.group>
   )
