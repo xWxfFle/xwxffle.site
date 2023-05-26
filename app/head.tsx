@@ -19,7 +19,7 @@ export default function Head() {
       <meta name='description' content={description} />
       <meta
         name='keywords'
-        content='Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist'
+        content='xWxfFle,Arseniy Filatov,Frontend Developer,Software Engineer,Data Scientist,Computer Scientist'
       />
       <meta name='robots' content='index,follow' />
       <meta name='distribution' content='web' />

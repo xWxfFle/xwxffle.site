@@ -27,12 +27,12 @@ export function NodeLogo(props: JSX.IntrinsicElements['group']) {
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime()
     if (!mesh.current) return
-    mesh.current.rotation.y += 0.01 
+    mesh.current.rotation.y += 0.01
 
     mesh.current.rotation.z += delta / 4
   })
   return (
-    <group {...props} dispose={null} ref={mesh} scale={3} position={[1,2,0]}>
+    <group {...props} dispose={null} ref={mesh} scale={3} position={[1, 2, 0]}>
       <mesh castShadow receiveShadow geometry={nodes.Plane_1.geometry} material={materials['Material.010']} />
       <mesh castShadow receiveShadow geometry={nodes.Plane_2.geometry} material={materials['Material.009']} />
       <mesh castShadow receiveShadow geometry={nodes.Plane_3.geometry} material={materials['Material.008']} />

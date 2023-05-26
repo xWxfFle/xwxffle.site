@@ -4,11 +4,10 @@ import { Loading } from '../canvas/Loading'
 import { getProject } from '@theatre/core'
 
 import projectState from 'public/theatre-project-state.json'
-import { useEffect, useState } from 'react'
 
+const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 const sheet = getProject('Targets Project', { state: projectState }).sheet('Targets Sheet')
-
-const Preview = dynamic(() => import('@/components/canvas/Preview').then((mod) => mod.Preview), { ssr: false })
+const LandingScene = dynamic(() => import('@/components/canvas/LandingScene').then((mod) => mod.LandingScene), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => <Loading />,
@@ -31,12 +30,13 @@ export function Landing() {
               })
             }}
           >
-            Click me
+            Contact me
           </button>
         </div>
       </div>
       <View className='flex h-screen w-full flex-col items-center justify-center'>
-        <Preview />
+        <LandingScene />
+        <Common/>
       </View>
     </>
   )

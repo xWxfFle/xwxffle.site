@@ -28,13 +28,13 @@ export function About() {
             working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my
             focus and began mastering <span className='text-info'>React</span> and{' '}
             <span className='text-info'>TypeScript</span> in 2022. These days I use{' '}
-            <span className='text-info'>Next.js</span> for project development and also enjoys creating WebGL
+            <span className='text-info'>Next.js</span> for project development and also enjoy creating WebGL
             applications using <span className='text-info'>Three.js</span> and{' '}
             <span className='text-info'>React Three Fiber</span>.
           </p>
         </div>
         <div className='h-96 w-full px-6 md:my-12  lg:w-2/6'>
-          <View className='rounded-box h-full w-full bg-base-300'>
+          <View className='rounded-box h-full w-full bg-base-200'>
             <ReactLogo />
             <Common position={[0, 0, 5]} />
           </View>
