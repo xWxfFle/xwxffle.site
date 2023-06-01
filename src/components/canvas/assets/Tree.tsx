@@ -8,7 +8,6 @@ import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { editable as e } from '@theatre/r3f'
 
-
 type GLTFResult = GLTF & {
   nodes: {
     ['tree-spruce']: THREE.Mesh

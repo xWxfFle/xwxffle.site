@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: string}) {
+export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
   const { nodes, materials } = useGLTF('/target.gltf') as GLTFResult
   return (
     <e.group {...props} dispose={null}>
