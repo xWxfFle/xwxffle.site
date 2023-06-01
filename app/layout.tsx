@@ -3,7 +3,7 @@ import '@/global.css'
 import { PropsWithChildren } from 'react'
 import { Rammetto_One, Nunito } from 'next/font/google'
 
-const nunito = Nunito({ weight: ['700','600', '400', '300', '200'], subsets: ['latin'], variable: '--font-nunito' })
+const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '--font-rammeto' })
 
 export const metadata = {

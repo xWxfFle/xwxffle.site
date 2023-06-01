@@ -28,7 +28,7 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
   })
 
   return (
-    <group {...props} dispose={null} ref={mesh} scale={1.7}>
+    <group {...props} dispose={null} ref={mesh} scale={1.6}>
       <mesh
         castShadow
         receiveShadow

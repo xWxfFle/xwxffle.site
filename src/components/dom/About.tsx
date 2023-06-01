@@ -1,19 +1,5 @@
 'use client'
-import { Loading } from '@/components/canvas/Loading'
-import dynamic from 'next/dynamic'
-import { Keyboard } from '../canvas/assets/Keyboard'
-
-const ReactLogo = dynamic(() => import('@/components/canvas/assets/ReactLogo').then((mod) => mod.ReactLogo), {
-  ssr: false,
-})
-const NodeLogo = dynamic(() => import('@/components/canvas/assets/NodeLogo').then((mod) => mod.NodeLogo), {
-  ssr: false,
-})
-const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
-  ssr: false,
-  loading: () => <Loading />,
-})
-const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
+import { CVScene, ReactLogoScene } from '../canvas/AboutScene'
 
 export function About() {
   return (
@@ -34,11 +20,7 @@ export function About() {
           </p>
         </div>
         <div className='h-96 w-full px-6 md:my-12  lg:w-2/6'>
-          <View className='h-full w-full'>
-            <ReactLogo />
-            <gridHelper args={[40, 20, '#1c8259', '#1c8259']} position={[0, -3, 0]} />
-            <Common position={[0, 0, 5]} />
-          </View>
+          <ReactLogoScene/>
         </div>
       </div>
 
@@ -91,10 +73,7 @@ export function About() {
           </div>
         </div>
         <div className=' mb-12 h-96  w-full px-6 md:my-12 lg:w-2/6'>
-          <View className='h-full w-full'>
-            <NodeLogo />
-            <Common />
-          </View>
+          <CVScene/>
         </div>
       </div>
     </>
