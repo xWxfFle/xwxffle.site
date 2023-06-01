@@ -1,7 +1,7 @@
 'use client'
 export const Loading = () => (
   <div className='flex h-full w-full flex-col items-center justify-center'>
-    <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-neutral-content' fill='none' viewBox='0 0 24 24'>
+    <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-secondary' fill='none' viewBox='0 0 24 24'>
       <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
       <path
         className='opacity-75'

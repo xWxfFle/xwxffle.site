@@ -34,8 +34,9 @@ export function About() {
           </p>
         </div>
         <div className='h-96 w-full px-6 md:my-12  lg:w-2/6'>
-          <View className='rounded-box h-full w-full bg-base-200'>
+          <View className='h-full w-full'>
             <ReactLogo />
+            <gridHelper args={[40, 20, '#1c8259', '#1c8259']} position={[0, -3, 0]} />
             <Common position={[0, 0, 5]} />
           </View>
         </div>
@@ -48,28 +49,32 @@ export function About() {
 
           <div tabIndex={0} className='collapse-plus rounded-box collapse my-4  bg-base-300'>
             <div className='collapse-title inline-flex items-center text-xl'>
-              <h3>HTML</h3>
+              <h3>HTML / CSS</h3>
             </div>
             <div className='collapse-content'>
-              <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+              <p className='text-2xl font-bold'>Preprocessors</p>
+              <p className='mb-4 text-xl'>Sass/Scss, PostCSS</p>
+              <p className='text-2xl font-bold'>Frameworks</p>
+              <p className='mb-4 text-xl'>Tailwind</p>
+              <p className='text-2xl font-bold'>UI libraries</p>
+              <p className='mb-4 text-xl'>daisyUI, shadcnUI, Radix, MUI</p>
             </div>
           </div>
           <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-300'>
             <div className='collapse-title inline-flex items-center text-xl'>
-              <h3>CSS</h3>
-            </div>
-            <div className='collapse-content'>
-              <p className='text-lg'>Preprocessors</p>
-              <p className='text-base font-thin'>Preprocessors</p>
-            </div>
-          </div>
-
-          <div tabIndex={0} className='collapse-plus rounded-box collapse my-4  bg-base-300'>
-            <div className='collapse-title inline-flex items-center text-xl'>
               <h3>JavaScript</h3>
             </div>
             <div className='collapse-content'>
-              <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+              <p className='text-2xl font-bold'>Languages</p>
+              <p className='mb-4 text-xl'>TypeScript, JavaScript</p>
+              <p className='text-2xl font-bold'>Frameworks</p>
+              <p className='mb-4 text-xl'>React, Next.js</p>
+              <p className='text-2xl font-bold'>Libraries</p>
+              <p className='mb-4 text-xl'>Redux, tRPC, PrismaORM, Tanstack(React)Query, Zustand</p>
+              <p className='text-2xl font-bold'>WebGL</p>
+              <p className='mb-4 text-xl'>Three.js, React Three fiber, Theatre.js, Rapier.js</p>
+              <p className='text-2xl font-bold'>Tools</p>
+              <p className='mb-4 text-xl'>Vite, T3 app, Vercel, Gulp</p>
             </div>
           </div>
 
@@ -78,12 +83,15 @@ export function About() {
               <h3>Other</h3>
             </div>
             <div className='collapse-content'>
-              <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+              <p className='text-2xl font-bold'>Design</p>
+              <p className='mb-4 text-xl'>Figma</p>
+              <p className='text-2xl font-bold'>OS</p>
+              <p className='mb-4 text-xl'>Windows</p>
             </div>
           </div>
         </div>
         <div className=' mb-12 h-96  w-full px-6 md:my-12 lg:w-2/6'>
-          <View className='h-full w-full rounded-lg bg-base-300'>
+          <View className='h-full w-full'>
             <NodeLogo />
             <Common />
           </View>

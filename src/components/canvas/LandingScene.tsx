@@ -1,4 +1,4 @@
-import { PerspectiveCamera, SheetProvider } from '@theatre/r3f'
+import { SheetProvider } from '@theatre/r3f'
 import { ContactShadows } from '@react-three/drei'
 import { getProject } from '@theatre/core'
 

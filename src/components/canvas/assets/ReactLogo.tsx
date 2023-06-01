@@ -22,9 +22,9 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
   const mesh = useRef<THREE.Group>(null)
   useFrame(() => {
     if (!mesh.current) return
-    mesh.current.rotation.y += 0.005
-    mesh.current.rotation.x -= 0.005
-    mesh.current.rotation.z -= 0.005
+    mesh.current.rotation.y += 0.002
+    mesh.current.rotation.x -= 0.002
+    mesh.current.rotation.z -= 0.002
   })
 
   return (
@@ -37,7 +37,7 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
         rotation={[0, Math.PI / 2, 0]}
         scale={0.27}
       >
-        <meshStandardMaterial roughness={0} color='#1fb2f5' />
+        <meshStandardMaterial roughness={1} color='#1fb2f5' />
         <mesh
           castShadow
           receiveShadow
@@ -46,7 +46,7 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
           rotation={[-0.16, 0, -Math.PI / 2]}
           scale={[3.75, 1.47, 3]}
         >
-          <MeshDistortMaterial roughness={0} color='#1fb2f5' />
+          <MeshDistortMaterial roughness={1} color='#1fb2f5' />
         </mesh>
         <mesh
           castShadow
@@ -56,7 +56,7 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
           rotation={[0.89, 0, -Math.PI / 2]}
           scale={[3.75, 1.47, 3]}
         >
-          <MeshDistortMaterial roughness={0} color='#1fb2f5' />
+          <MeshDistortMaterial roughness={1} color='#1fb2f5' />
         </mesh>
         <mesh
           castShadow
@@ -66,7 +66,7 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
           rotation={[-1.18, 0, -Math.PI / 2]}
           scale={[3.75, 1.47, 3]}
         >
-          <MeshDistortMaterial roughness={0} color='#1fb2f5' />
+          <MeshDistortMaterial roughness={1} color='#1fb2f5' />
         </mesh>
       </mesh>
     </group>

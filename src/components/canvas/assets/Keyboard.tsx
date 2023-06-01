@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 export function Keyboard(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/keyboard.gltf') as GLTFResult
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={[0, -1, 1]} rotation={[0, Math.PI / 8, 0]}>
       <mesh
         castShadow
         receiveShadow
