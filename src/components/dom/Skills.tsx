@@ -8,7 +8,7 @@ export const Skills = () => {
         <p className=' mb-4 font-rammeto text-xl uppercase'>02</p>
         <h2 className='mb-4 text-4xl font-bold leading-tight'>My skills</h2>
 
-        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4  bg-base-300'>
+        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4  bg-base-100  shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
             <h3>HTML / CSS</h3>
           </div>
@@ -21,7 +21,7 @@ export const Skills = () => {
             <p className='mb-4 text-xl'>daisyUI, shadcnUI, Radix, MUI</p>
           </div>
         </div>
-        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-300'>
+        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-100 shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
             <h3>JavaScript</h3>
           </div>
@@ -39,7 +39,7 @@ export const Skills = () => {
           </div>
         </div>
 
-        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-300'>
+        <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-100  shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
             <h3>Other</h3>
           </div>

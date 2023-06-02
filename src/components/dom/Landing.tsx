@@ -1,12 +1,8 @@
 'use client'
 import dynamic from 'next/dynamic'
 import { Loading } from '../canvas/Loading'
-import { getProject } from '@theatre/core'
-
-import projectState from 'public/theatre-project-state.json'
 
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
-const sheet = getProject('Targets Project', { state: projectState }).sheet('Targets Sheet')
 const LandingScene = dynamic(() => import('@/components/canvas/LandingScene').then((mod) => mod.LandingScene), {
   ssr: false,
 })
@@ -23,7 +19,7 @@ export const Landing = () => {
           <h2 className='text-xl uppercase'>Hello, my name is</h2>
           <h1 className='mb-4 text-5xl font-bold'>Arseniy Filatov</h1>
           <h3 className='text-2xl leading-normal'>And I`m a react frontend developer</h3>
-          <a href='#footer' className='btn-secondary btn-wide btn'>
+          <a href='#footer' className='btn-secondary btn-wide btn  shadow-xl'>
             Contact me
           </a>
         </div>
