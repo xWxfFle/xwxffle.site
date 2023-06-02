@@ -8,7 +8,7 @@ const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '
 
 export const metadata = {
   title: 'Arseniy Filatov • Frontend developer',
-  description: 'This is my personal website :D',
+  description: 'This is my portfolio site',
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {

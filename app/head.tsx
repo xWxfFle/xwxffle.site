@@ -1,6 +1,6 @@
-const title = 'Arseniy Filatov - Frontend developer'
-const url = 'https://xwxffle.vercel.app/'
-const description = 'This is my personal site :D'
+const title = 'Arseniy Filatov • Frontend developer'
+const url = 'https://xwxffle.site'
+const description = 'This is my portfolio site'
 const author = 'xWxfFle'
 
 export default function Head() {
@@ -19,7 +19,7 @@ export default function Head() {
       <meta name='description' content={description} />
       <meta
         name='keywords'
-        content='xWxfFle,Arseniy Filatov,Frontend Developer,Software Engineer,Data Scientist,Computer Scientist'
+        content='xWxfFle,Arseniy Filatov,Frontend Developer, Арсений Филатов, xwxffle, frontend, developer'
       />
       <meta name='robots' content='index,follow' />
       <meta name='distribution' content='web' />
