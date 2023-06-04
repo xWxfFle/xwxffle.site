@@ -1,5 +1,7 @@
 {
-  "name": "xwxffle",
+  "name": "Arseniy Filatov. Frontend developer",
+  "description": " I`m a react frontend developer from Rostov-on-Don, Russia.",
+  "lang": "en",
   "short_name": "xwxffle",
   "icons": [
     {
@@ -24,6 +26,6 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#197550",
   "background_color": "#ffffff"
 }
