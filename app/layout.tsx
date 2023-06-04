@@ -3,6 +3,8 @@ import '@/global.css'
 import { PropsWithChildren } from 'react'
 import { Rammetto_One, Nunito } from 'next/font/google'
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
+ 
 
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '--font-rammeto' })
@@ -39,6 +41,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <link rel='shortcut icon' type='image/x-icon' href='/icons/favicon.ico' />
       <body>
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   )
