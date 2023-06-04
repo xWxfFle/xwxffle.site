@@ -10,7 +10,7 @@ export const Skills = () => {
 
         <div tabIndex={0} className='collapse-plus rounded-box collapse my-4  bg-base-100  shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
-            <h3>HTML / CSS</h3>
+            <h2>HTML / CSS</h2>
           </div>
           <div className='collapse-content'>
             <p className='text-2xl font-bold'>Preprocessors</p>
@@ -23,7 +23,7 @@ export const Skills = () => {
         </div>
         <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-100 shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
-            <h3>JavaScript</h3>
+            <h2>JavaScript</h2>
           </div>
           <div className='collapse-content'>
             <p className='text-2xl font-bold'>Languages</p>
@@ -41,7 +41,7 @@ export const Skills = () => {
 
         <div tabIndex={0} className='collapse-plus rounded-box collapse my-4 bg-base-100  shadow-xl'>
           <div className='collapse-title inline-flex items-center text-xl'>
-            <h3>Other</h3>
+            <h2>Other</h2>
           </div>
           <div className='collapse-content'>
             <p className='text-2xl font-bold'>Design</p>

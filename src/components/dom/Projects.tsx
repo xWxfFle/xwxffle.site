@@ -9,7 +9,7 @@ export const Projects = () => {
         <div className='flex w-full flex-wrap justify-between  md:flex-row'>
           <div className='card mb-4 w-96 bg-base-100 shadow-xl'>
             <div className='card-body'>
-              <h2 className='card-title'>Portfolio</h2>
+              <h3 className='card-title'>Portfolio</h3>
               <p className='my-4'>This site was made with Next.js, React Three Fiber and Theatre.js </p>
               <div className='card-actions justify-end'>
                 <a href='https://github.com/xWxfFle/xwxffle.site' target='_blank'>
@@ -20,7 +20,7 @@ export const Projects = () => {
           </div>
           <div className='card mb-4 w-96 bg-base-100 shadow-xl'>
             <div className='card-body'>
-              <h2 className='card-title'>ChatNext</h2>
+              <h3 className='card-title'>ChatNext</h3>
               <p className='my-4'>Chat app made with T3 Stack (Next.js, tRPC, Prisma, Tailwind) </p>
               <div className='card-actions justify-end'>
                 <a href='https://github.com/xWxfFle/ChatNext' target='_blank'>
@@ -35,7 +35,7 @@ export const Projects = () => {
 
           <div className='card mb-4 w-96 bg-base-100 shadow-xl'>
             <div className='card-body'>
-              <h2 className='card-title'>First person camera</h2>
+              <h3 className='card-title'>First person camera</h3>
               <p className='my-4'>Implementation of FPC with React Three Fiber and Rapier.js</p>
               <div className='card-actions justify-end'>
                 <a href='https://github.com/xWxfFle/R3F-First-person-camera' target='_blank'>
@@ -50,7 +50,7 @@ export const Projects = () => {
 
           <div className='card mb-4 w-96 bg-base-100 shadow-xl'>
             <div className='card-body'>
-              <h2 className='card-title'>Toyota AE86</h2>
+              <h3 className='card-title'>Toyota AE86</h3>
               <p className='my-4'>Car staging with postprocessing</p>
               <div className='card-actions justify-end'>
                 <a href='https://github.com/xWxfFle/R3F-Car-staging' target='_blank'>
@@ -65,7 +65,7 @@ export const Projects = () => {
 
           <div className='card mb-4 w-96 bg-base-100 shadow-xl'>
             <div className='card-body'>
-              <h2 className='card-title'>Unit-01 staging</h2>
+              <h3 className='card-title'>Unit-01 staging</h3>
               <p className='my-4'>Binding the camera to scroll</p>
               <div className='card-actions justify-end'>
                 <a href='https://github.com/xWxfFle/Eva-01' target='_blank'>

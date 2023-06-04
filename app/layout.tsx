@@ -9,14 +9,18 @@ const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '
 
 export const metadata: Metadata = {
   title: 'Arseniy Filatov  • Frontend developer',
-  description: 'This is my portfolio site',
+  description:
+    'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia with a year of commercial experience. I started my career in 2021 as a trainee Node.js developer for a company working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my focus  and began mastering React and TypeScript in 2022. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber. Also, I like to play video games in my spare time.',
   keywords: ['Arseniy Filatov', 'xwxffle', 'Frontend', 'Frontend developer', 'React'],
   creator: 'Arseniy Filatov',
+  metadataBase: new URL('https://xwxffle.site'),
   themeColor: '#197550',
   manifest: '/manifest.json',
   openGraph: {
     title: 'Arseniy Filatov  • Frontend developer',
-    description: 'This is my portfolio site',
+    url: "https://xwxffle.site",
+    description:
+      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia with a year of commercial experience. I started my career in 2021 as a trainee Node.js developer for a company working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my focus  and began mastering React and TypeScript in 2022. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber. Also, I like to play video games in my spare time.',
     type: 'website',
   },
 }
@@ -32,6 +36,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <link rel='apple-touch-startup-image' href='/startup.png' />
       <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
       <link rel='icon' type='image/x-icon' href='/icons/favicon.ico' />
+      <link rel='shortcut icon' type='image/x-icon' href='/icons/favicon.ico' />
       <body>
         <Layout>{children}</Layout>
       </body>
