@@ -4,26 +4,30 @@ import { PropsWithChildren } from 'react'
 import { Rammetto_One, Nunito } from 'next/font/google'
 import { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
- 
 
-const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
+const nunito = Nunito({ weight: ['200', '300', '400', '500', '600'], subsets: ['latin'], variable: '--font-nunito' })
 const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '--font-rammeto' })
 
 export const metadata: Metadata = {
-  title: 'Arseniy Filatov  • Frontend developer',
+  title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
   description:
-    'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia with a year of commercial experience. I started my career in 2021 as a trainee Node.js developer for a company working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my focus  and began mastering React and TypeScript in 2022. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber. Also, I like to play video games in my spare time.',
+    'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
   keywords: ['Arseniy Filatov', 'xwxffle', 'Frontend', 'Frontend developer', 'React'],
   creator: 'Arseniy Filatov',
   metadataBase: new URL('https://xwxffle.site'),
   themeColor: '#197550',
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Arseniy Filatov  • Frontend developer',
-    url: "https://xwxffle.site",
+    title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
+    url: 'https://xwxffle.site',
     description:
-      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia with a year of commercial experience. I started my career in 2021 as a trainee Node.js developer for a company working on blockchain apps. After realizing my interest was mostly in frontend development, I shifted my focus  and began mastering React and TypeScript in 2022. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber. Also, I like to play video games in my spare time.',
+      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
     type: 'website',
+  },
+  twitter: {
+    title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
+    description:
+      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
   },
 }
 
