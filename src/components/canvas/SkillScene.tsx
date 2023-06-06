@@ -21,7 +21,7 @@ export const SkillScene = () => (
         lineHeight={0.5}
         letterSpacing={-0.06}
         size={1}
-        font='/Rammetto_One_Regular.json'
+        font='/fonts/Rammetto_One_Regular.json'
       >
         {`hello\nworld`}
         <MeshWobbleMaterial color={'#F4B857'} factor={0.5} />

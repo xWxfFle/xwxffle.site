@@ -11,7 +11,7 @@ const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '
 export const metadata: Metadata = {
   title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
   description:
-    'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
+    'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
   keywords: ['Arseniy Filatov', 'xwxffle', 'Frontend', 'Frontend developer', 'React'],
   creator: 'Arseniy Filatov',
   metadataBase: new URL('https://xwxffle.site'),
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
     url: 'https://xwxffle.site',
     description:
-      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
+      'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
     type: 'website',
   },
   twitter: {
     title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
     description:
-      'I`m a 17 y.o. react frontend developer from Rostov-on-Don, Russia. These days I use Next.js for project development and also enjoy creating WebGL applications using Three.js and React Three Fiber.',
+      'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
   },
 }
 

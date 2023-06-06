@@ -19,6 +19,7 @@
     "@theatre/studio": "^0.6.1",
     "@types/three": "^0.152.0",
     "@vercel/analytics": "^1.0.1",
+    "@vercel/og": "^0.5.6",
     "daisyui": "^2.51.6",
     "glsl-random": "^0.0.5",
     "next": "^13.4.2",

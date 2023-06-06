@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Stones(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
-  const { nodes, materials } = useGLTF('/stones.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/stones.gltf') as GLTFResult
   return (
     <e.group {...props} dispose={null}>
       <mesh
@@ -32,4 +32,4 @@ export function Stones(props: JSX.IntrinsicElements['group'] & { theatreKey: str
   )
 }
 
-useGLTF.preload('/stones.gltf')
+useGLTF.preload('/models/stones.gltf')

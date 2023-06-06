@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
-  const { nodes, materials } = useGLTF('/target.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/target.gltf') as GLTFResult
   return (
     <e.group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
@@ -34,4 +34,4 @@ export function Target(props: JSX.IntrinsicElements['group'] & { theatreKey: str
   )
 }
 
-useGLTF.preload('/target.gltf')
+useGLTF.preload('/models/target.gltf')

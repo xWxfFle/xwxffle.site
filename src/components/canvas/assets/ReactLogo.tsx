@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
 }
 
 export function ReactLogo(props: JSX.IntrinsicElements['group']) {
-  const { nodes } = useGLTF('/react-logo.gltf') as GLTFResult
+  const { nodes } = useGLTF('/models/react-logo.gltf') as GLTFResult
   const mesh = useRef<THREE.Group>(null)
   useFrame(() => {
     if (!mesh.current) return
@@ -73,4 +73,4 @@ export function ReactLogo(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/react-logo.gltf')
+useGLTF.preload('/models/react-logo.gltf')

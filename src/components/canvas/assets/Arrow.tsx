@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Arrow(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
-  const { nodes, materials } = useGLTF('/arrow.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/arrow.gltf') as GLTFResult
   return (
     <e.group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
@@ -34,4 +34,4 @@ export function Arrow(props: JSX.IntrinsicElements['group'] & { theatreKey: stri
   )
 }
 
-useGLTF.preload('/arrow.gltf')
+useGLTF.preload('/models/arrow.gltf')

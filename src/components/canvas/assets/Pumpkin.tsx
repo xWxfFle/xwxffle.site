@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Pumpkin(props: JSX.IntrinsicElements['group'] & { theatreKey: string }) {
-  const { nodes, materials } = useGLTF('/pumpkin.gltf') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/pumpkin.gltf') as GLTFResult
   return (
     <e.group {...props} dispose={null}>
       <group position={[0, 1.21, 0]} scale={1.5}>
@@ -31,4 +31,4 @@ export function Pumpkin(props: JSX.IntrinsicElements['group'] & { theatreKey: st
   )
 }
 
-useGLTF.preload('/pumpkin.gltf')
+useGLTF.preload('/models/pumpkin.gltf')
