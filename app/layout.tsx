@@ -8,26 +8,27 @@ import { Analytics } from '@vercel/analytics/react'
 const nunito = Nunito({ weight: ['200', '300', '400', '500', '600'], subsets: ['latin'], variable: '--font-nunito' })
 const rammetto = Rammetto_One({ weight: ['400'], subsets: ['latin'], variable: '--font-rammeto' })
 
+const title = 'Arseniy Filatov  • Frontend developer'
+const description =
+  'I`m a 17 y.o. frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.'
+
 export const metadata: Metadata = {
-  title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
-  description:
-    'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
-  keywords: ['Arseniy Filatov', 'xwxffle', 'Frontend', 'Frontend developer', 'React'],
+  title,
+  description,
+  keywords: ['Arseniy Filatov', 'xwxffle', 'Frontend', 'Frontend developer'],
   creator: 'Arseniy Filatov',
   metadataBase: new URL('https://xwxffle.site'),
   themeColor: '#197550',
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
+    title,
     url: 'https://xwxffle.site',
-    description:
-      'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
+    description,
     type: 'website',
   },
   twitter: {
-    title: 'Arseniy Filatov  • Frontend developer • xWxfFle',
-    description:
-      'I`m a 17 y.o. react frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.',
+    title,
+    description,
   },
 }
 

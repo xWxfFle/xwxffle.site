@@ -18,7 +18,7 @@ export const Landing = () => {
         <div className=' hero-content w-full flex-col items-start justify-center md:mt-40 '>
           <h3 className='text-xl uppercase'>Hello, my name is</h3>
           <h1 className='mb-4 text-5xl font-bold'>Arseniy Filatov</h1>
-          <h2 className='text-2xl leading-normal'>And I`m a react frontend developer</h2>
+          <h2 className='text-2xl leading-normal'>And I`m a frontend developer</h2>
           <a href='#footer' className='btn-secondary btn-wide btn  shadow-xl'>
             Contact me
           </a>
