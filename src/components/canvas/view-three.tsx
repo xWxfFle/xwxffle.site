@@ -26,9 +26,9 @@ export const Common = ({
   return (
     <Suspense fallback={null}>
       {color && <color attach="background" args={[color]} />}
-      <ambientLight intensity={0.5} />
-      <pointLight position={[20, 30, 10]} intensity={0.6} />
-      <pointLight position={[-10, 20, -10]} intensity={0.4} />
+      <ambientLight intensity={1.5} />
+      <pointLight position={[2, 3, 1]} intensity={5.6} />
+      <pointLight position={[-1, 2, -1]} intensity={5.4} />
       <PerspectiveCamera
         makeDefault
         fov={60}
