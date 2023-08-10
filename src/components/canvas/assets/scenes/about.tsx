@@ -1,22 +1,25 @@
+/* eslint-disable react/no-unknown-property */
 import dynamic from 'next/dynamic'
-import { Loading } from './Loading'
+import { Loading } from '../../../ui/loading'
 
 const ReactLogo = dynamic(
   () =>
-    import('@/components/canvas/assets/ReactLogo').then((mod) => mod.ReactLogo),
+    import('@/components/canvas/assets/models/react-logo').then(
+      (mod) => mod.ReactLogo,
+    ),
   {
     ssr: false,
   },
 )
 const View = dynamic(
-  () => import('@/components/canvas/View').then((mod) => mod.View),
+  () => import('@/components/canvas/view-three').then((mod) => mod.View),
   {
     ssr: false,
     loading: () => <Loading />,
   },
 )
 const Common = dynamic(
-  () => import('@/components/canvas/View').then((mod) => mod.Common),
+  () => import('@/components/canvas/view-three').then((mod) => mod.Common),
   { ssr: false },
 )
 

@@ -1,9 +1,11 @@
 'use client'
 
-import { PropsWithChildren, useRef } from 'react'
 import dynamic from 'next/dynamic'
+import { PropsWithChildren, useRef } from 'react'
 
-const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
+const Scene = dynamic(() => import('@/components/canvas/scene-three'), {
+  ssr: false,
+})
 
 const Layout = ({ children }: PropsWithChildren) => {
   const ref = useRef<HTMLDivElement>(null)
@@ -30,7 +32,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           pointerEvents: 'none',
         }}
         eventSource={ref}
-        eventPrefix='client'
+        eventPrefix="client"
       />
     </div>
   )

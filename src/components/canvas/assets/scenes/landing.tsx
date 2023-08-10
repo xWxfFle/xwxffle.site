@@ -3,11 +3,7 @@ import { getProject } from '@theatre/core'
 import { SheetProvider } from '@theatre/r3f'
 import projectState from 'public/theatre-project-state.json'
 import { useEffect } from 'react'
-import { Arrow } from './assets/Arrow'
-import { Pumpkin } from './assets/Pumpkin'
-import { Stones } from './assets/Stones'
-import { Target } from './assets/Target'
-import { Tree } from './assets/Tree'
+import { Arrow, Pumpkin, Stones, Target, Tree } from '..'
 
 const sheet = getProject('Targets Project', { state: projectState }).sheet(
   'Targets Sheet',

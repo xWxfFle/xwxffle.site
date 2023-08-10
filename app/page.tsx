@@ -1,9 +1,5 @@
 'use client'
-import { About } from '@/components/dom/About'
-import { Footer } from '@/components/dom/Footer'
-import { Landing } from '@/components/dom/Landing'
-import { Projects } from '@/components/dom/Projects'
-import { Skills } from '@/components/dom/Skills'
+import { About, Footer, Landing, Projects, Skills } from '@/components/ui'
 
 export default function Page() {
   return (
@@ -11,7 +7,7 @@ export default function Page() {
       <Landing />
       <About />
       <Skills />
-      <Projects/>
+      <Projects />
       <Footer />
     </>
   )
