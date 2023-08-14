@@ -19,8 +19,10 @@ import { Three } from '@/helpers/components/Three'
 export const Common = ({
   color,
   position,
+  fov,
 }: {
   color?: string
+  fov?: number
   position?: Vector3
 }) => {
   return (
@@ -31,8 +33,8 @@ export const Common = ({
       <pointLight position={[-1, 2, -1]} intensity={5.4} />
       <PerspectiveCamera
         makeDefault
-        fov={60}
-        position={position ? position : [1, 2, 6]}
+        fov={fov ? fov : 60}
+        position={position ? position : [1, 1.2, 6.4]}
       />
     </Suspense>
   )

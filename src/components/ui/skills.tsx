@@ -7,7 +7,7 @@ export const Skills = () => {
     <div className="mx-auto flex w-full flex-col flex-wrap items-start justify-center bg-base-200 md:flex-row-reverse">
       <div className="h-full w-full p-6 md:my-12 md:mb-40 lg:w-2/6">
         <p className="mb-4 font-rammeto text-xl uppercase">02</p>
-        <h2 className="mb-4 text-4xl font-bold leading-tight">My skills</h2>
+        <h2 className="mb-4 text-4xl font-bold leading-tight">My stack</h2>
 
         <div
           tabIndex={0}
@@ -17,12 +17,12 @@ export const Skills = () => {
             <h2>HTML / CSS</h2>
           </div>
           <div className="collapse-content">
-            <p className="text-2xl font-bold">Preprocessors</p>
-            <p className="mb-4 text-xl">Sass/Scss, PostCSS</p>
             <p className="text-2xl font-bold">Frameworks</p>
             <p className="mb-4 text-xl">Tailwind, Typewind</p>
-            <p className="text-2xl font-bold">UI libraries</p>
-            <p className="mb-4 text-xl">daisyUI, shadcnUI, Radix</p>
+            <p className="text-2xl font-bold">Libraries</p>
+            <p className="mb-4 text-xl">
+              daisyUI, shadcnUI, RadixUI, cva, clsx
+            </p>
           </div>
         </div>
         <div
@@ -46,7 +46,7 @@ export const Skills = () => {
               Three.js, React Three fiber, Theatre.js, Rapier.js
             </p>
             <p className="text-2xl font-bold">Tools</p>
-            <p className="mb-4 text-xl">Vite, T3 app, Vercel</p>
+            <p className="mb-4 text-xl">Eslint-kit, Vite, T3-app, @neodx/svg</p>
           </div>
         </div>
 

@@ -6,7 +6,7 @@ import { PropsWithChildren } from 'react'
 import { Layout } from '@/components/ui/layout'
 
 const nunito = Nunito({
-  weight: ['200', '300', '400', '500', '600'],
+  weight: ['200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-nunito',
 })
@@ -16,7 +16,7 @@ const rammetto = Rammetto_One({
   variable: '--font-rammeto',
 })
 
-const title = 'Arseniy Filatov  • Frontend developer'
+const title = 'Arseniy Filatov • Frontend developer'
 const description =
   'I`m a 18 y.o. frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.'
 
