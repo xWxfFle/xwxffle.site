@@ -1,6 +1,15 @@
 'use client'
 
-import { ReactLogoScene } from '../canvas/assets'
+import dynamic from 'next/dynamic'
+import { Scene } from '@/entities/scene'
+
+const ReactLogo = dynamic(
+  () =>
+    import('@/shared/ui/assets/models/react-logo').then((mod) => mod.ReactLogo),
+  {
+    ssr: false,
+  },
+)
 
 export function About() {
   return (
@@ -9,13 +18,12 @@ export function About() {
         <p className="mb-4 font-rammeto text-xl uppercase">01</p>
         <h2 className="mb-4 text-4xl font-bold leading-tight">About me</h2>
         <p className="mb-8  leading-normal">
-          I`m a 18 y.o. frontend developer from Rostov-on-Don, Russia with a
-          year of commercial experience. Now I live in St. Petersburg and study
-          at ITMO University. I started my career in 2021 as a trainee{' '}
-          <span className="text-info">Node.js</span> developer for a company
-          working on blockchain apps. After realizing my interest was mostly in
-          frontend development, I shifted my focus and began mastering{' '}
-          <span className="text-info">React</span> and{' '}
+          I`m a 18 y.o. frontend developer from Rostov-on-Don, Russia. Now I
+          live in St. Petersburg and study at ITMO University. I started my
+          career in 2021 as a trainee <span className="text-info">Node.js</span>{' '}
+          developer for a company working on blockchain apps. After realizing my
+          interest was mostly in frontend development, I shifted my focus and
+          began mastering <span className="text-info">React</span> and{' '}
           <span className="text-info">TypeScript</span> in 2022. These days I
           use <span className="text-info">Next.js</span> for project development
           and also enjoy creating WebGL applications using{' '}
@@ -24,7 +32,9 @@ export function About() {
         </p>
       </div>
       <div className="h-96 w-full px-6 md:my-12  lg:w-2/6">
-        <ReactLogoScene />
+        <Scene grid position={[0, 0, 5]}>
+          <ReactLogo />
+        </Scene>
       </div>
     </div>
   )

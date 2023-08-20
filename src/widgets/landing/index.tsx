@@ -1,22 +1,11 @@
 'use client'
 import dynamic from 'next/dynamic'
-import { Loading } from './loading'
+import { Scene } from '@/entities/scene'
 
-const Common = dynamic(
-  () => import('@/components/canvas/view-three').then((mod) => mod.Common),
-  { ssr: false },
-)
 const LandingScene = dynamic(
-  () => import('@/components/canvas/assets').then((mod) => mod.LandingScene),
+  () => import('./ui/background').then((mod) => mod.LandingScene),
   {
     ssr: false,
-  },
-)
-const View = dynamic(
-  () => import('@/components/canvas/view-three').then((mod) => mod.View),
-  {
-    ssr: false,
-    loading: () => <Loading />,
   },
 )
 
@@ -39,10 +28,9 @@ export const Landing = () => {
         </div>
       </div>
       <div className="h-1/2 lg:h-2/3 w-full">
-        <View className="flex h-full w-full flex-col items-center justify-center">
+        <Scene fov={35} position={[1, 1.2, 6.4]}>
           <LandingScene />
-          <Common fov={35} />
-        </View>
+        </Scene>
       </div>
     </>
   )

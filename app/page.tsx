@@ -1,14 +1,7 @@
 'use client'
-import { About, Footer, Landing, Projects, Skills } from '@/components/ui'
+
+import { HomePage } from '@/pages/home'
 
 export default function Page() {
-  return (
-    <>
-      <Landing />
-      <About />
-      <Skills />
-      <Projects />
-      <Footer />
-    </>
-  )
+  return <HomePage />
 }

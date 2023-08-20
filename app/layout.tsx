@@ -1,9 +1,10 @@
+'use client'
 import '@/global.css'
 import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { Nunito, Rammetto_One } from 'next/font/google'
-import { PropsWithChildren } from 'react'
-import { Layout } from '@/components/ui/layout'
+import { PropsWithChildren, useRef } from 'react'
 
 const nunito = Nunito({
   weight: ['200', '300', '400', '500', '600', '700'],
@@ -40,39 +41,70 @@ export const metadata: Metadata = {
   },
 }
 
+const MetaLinks = () => (
+  <>
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="16x16"
+      href="/icons/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link rel="mask-icon" color="#000000" href="/icons/safari-pinned-tab.svg" />
+    <link rel="apple-touch-startup-image" href="/startup.png" />
+    <link rel="shortcut icon" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/icons/favicon.ico" />
+  </>
+)
+
+const Canvas = dynamic(() => import('@/shared/lib/r3f/canvas'), {
+  ssr: false,
+})
+
 export default function RootLayout({ children }: PropsWithChildren) {
+  const ref = useRef<HTMLDivElement>(null)
+
   return (
     <html
       lang="en"
       className={`antialiased ${nunito.variable} ${rammetto.variable}`}
     >
-      <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-      <link
-        rel="apple-touch-icon"
-        sizes="16x16"
-        href="/icons/favicon-16x16.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="32x32"
-        href="/icons/favicon-32x32.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/icons/apple-touch-icon.png"
-      />
-      <link
-        rel="mask-icon"
-        color="#000000"
-        href="/icons/safari-pinned-tab.svg"
-      />
-      <link rel="apple-touch-startup-image" href="/startup.png" />
-      <link rel="shortcut icon" href="/icons/apple-touch-icon.png" />
-      <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
-      <link rel="shortcut icon" type="image/x-icon" href="/icons/favicon.ico" />
+      <MetaLinks />
       <body>
-        <Layout>{children}</Layout>
+        <div
+          ref={ref}
+          style={{
+            position: 'relative',
+            width: ' 100%',
+            height: '100%',
+            overflow: 'auto',
+            touchAction: 'auto',
+          }}
+        >
+          {children}
+          <Canvas
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100vh',
+              pointerEvents: 'none',
+            }}
+            eventSource={ref}
+            eventPrefix="client"
+          />
+        </div>
         <Analytics />
       </body>
     </html>

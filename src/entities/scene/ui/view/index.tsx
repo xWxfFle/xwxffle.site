@@ -14,7 +14,7 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react'
-import { Three } from '@/helpers/components/Three'
+import { r3f } from '@/shared/lib/r3f'
 
 export const Common = ({
   color,
@@ -22,8 +22,8 @@ export const Common = ({
   fov,
 }: {
   color?: string
-  fov?: number
-  position?: Vector3
+  fov: number
+  position: Vector3
 }) => {
   return (
     <Suspense fallback={null}>
@@ -31,11 +31,7 @@ export const Common = ({
       <ambientLight intensity={1.5} />
       <pointLight position={[2, 3, 1]} intensity={5.6} />
       <pointLight position={[-1, 2, -1]} intensity={5.4} />
-      <PerspectiveCamera
-        makeDefault
-        fov={fov ? fov : 60}
-        position={position ? position : [1, 1.2, 6.4]}
-      />
+      <PerspectiveCamera makeDefault fov={fov} position={position} />
     </Suspense>
   )
 }
@@ -55,12 +51,12 @@ const View = forwardRef(
     return (
       <>
         <div ref={localRef} {...props} />
-        <Three>
+        <r3f.In>
           <ViewImpl track={localRef}>
             {children}
             {orbit && <OrbitControls enablePan={false} autoRotate />}
           </ViewImpl>
-        </Three>
+        </r3f.In>
       </>
     )
   },

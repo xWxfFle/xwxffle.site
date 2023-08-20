@@ -1,7 +1,0 @@
-export * from './about'
-export * from './footer'
-export * from './landing'
-export * from './layout'
-export * from './loading'
-export * from './projects'
-export * from './skills'

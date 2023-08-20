@@ -1,5 +1,5 @@
 'use client'
-export const Loading = () => (
+export const Loader = () => (
   <div className="flex h-full w-full flex-col items-center justify-center">
     <svg
       className="-ml-1 mr-3 h-5 w-5 animate-spin text-primary-content"
