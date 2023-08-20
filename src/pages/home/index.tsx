@@ -5,7 +5,7 @@ import { Landing } from '@/widgets/landing'
 import { Projects } from '@/widgets/projects'
 import { Skills } from '@/widgets/skills'
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <Landing />
@@ -16,3 +16,5 @@ export const HomePage = () => {
     </>
   )
 }
+
+export default HomePage
