@@ -1,10 +1,9 @@
-'use client'
 import '@/global.css'
 import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
-import dynamic from 'next/dynamic'
 import { Nunito, Rammetto_One } from 'next/font/google'
-import { PropsWithChildren, useRef } from 'react'
+import { PropsWithChildren } from 'react'
+import { Layout } from '@/shared/ui'
 
 const nunito = Nunito({
   weight: ['200', '300', '400', '500', '600', '700'],
@@ -67,13 +66,7 @@ const MetaLinks = () => (
   </>
 )
 
-const Canvas = dynamic(() => import('@/shared/lib/r3f/canvas'), {
-  ssr: false,
-})
-
 export default function RootLayout({ children }: PropsWithChildren) {
-  const ref = useRef<HTMLDivElement>(null)
-
   return (
     <html
       lang="en"
@@ -81,30 +74,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     >
       <MetaLinks />
       <body>
-        <div
-          ref={ref}
-          style={{
-            position: 'relative',
-            width: ' 100%',
-            height: '100%',
-            overflow: 'auto',
-            touchAction: 'auto',
-          }}
-        >
-          {children}
-          <Canvas
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100vw',
-              height: '100vh',
-              pointerEvents: 'none',
-            }}
-            eventSource={ref}
-            eventPrefix="client"
-          />
-        </div>
+        <Layout>{children}</Layout>
         <Analytics />
       </body>
     </html>
