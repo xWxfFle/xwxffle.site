@@ -4,7 +4,7 @@
 import { Float, MeshWobbleMaterial, Text3D } from '@react-three/drei'
 import { ContentBlock } from '@/entities/content-block'
 import { Scene } from '@/entities/scene'
-import { Container } from '@/shared/ui'
+import { Collapse, Container } from '@/shared/ui'
 
 const SkillsScene = () => (
   <Scene grid position={[0, 0, 5]}>
@@ -32,61 +32,38 @@ export const Skills = () => {
   return (
     <Container className="md:flex-row-reverse">
       <ContentBlock title="My stack" subtitle="02" scene={<SkillsScene />}>
-        <div
-          tabIndex={0}
-          className="collapse-plus rounded-box collapse my-4  bg-base-100  shadow-xl"
-        >
-          <div className="collapse-title inline-flex items-center text-xl">
-            <h2>HTML / CSS</h2>
-          </div>
-          <div className="collapse-content">
-            <p className="text-2xl font-bold">Frameworks</p>
-            <p className="mb-4 text-xl">Tailwind, Typewind</p>
-            <p className="text-2xl font-bold">Libraries</p>
-            <p className="mb-4 text-xl">
-              daisyUI, shadcnUI, RadixUI, cva, clsx
-            </p>
-          </div>
-        </div>
-        <div
-          tabIndex={0}
-          className="collapse-plus rounded-box collapse my-4 bg-base-100 shadow-xl"
-        >
-          <div className="collapse-title inline-flex items-center text-xl">
-            <h2>JavaScript</h2>
-          </div>
-          <div className="collapse-content">
-            <p className="text-2xl font-bold">Languages</p>
-            <p className="mb-4 text-xl">TypeScript, JavaScript</p>
-            <p className="text-2xl font-bold">Frameworks</p>
-            <p className="mb-4 text-xl">React, Next.js</p>
-            <p className="text-2xl font-bold">Libraries</p>
-            <p className="mb-4 text-xl">
-              Effector, tRPC, PrismaORM, Tanstack(React)Query
-            </p>
-            <p className="text-2xl font-bold">WebGL</p>
-            <p className="mb-4 text-xl">
-              Three.js, React Three fiber, Theatre.js, Rapier.js
-            </p>
-            <p className="text-2xl font-bold">Tools</p>
-            <p className="mb-4 text-xl">Eslint-kit, Vite, T3-app, @neodx/svg</p>
-          </div>
-        </div>
+        <Collapse.Root title="HTML / CSS">
+          <Collapse.Heading>Frameworks</Collapse.Heading>
+          <Collapse.Paragraph>Tailwind, Typewind</Collapse.Paragraph>
+          <Collapse.Heading>Libraries</Collapse.Heading>
+          <Collapse.Paragraph>
+            daisyUI, shadcnUI, RadixUI, cva, clsx
+          </Collapse.Paragraph>
+        </Collapse.Root>
 
-        <div
-          tabIndex={0}
-          className="collapse-plus rounded-box collapse my-4 bg-base-100  shadow-xl"
-        >
-          <div className="collapse-title inline-flex items-center text-xl">
-            <h2>Other</h2>
-          </div>
-          <div className="collapse-content">
-            <p className="text-2xl font-bold">Design</p>
-            <p className="mb-4 text-xl">Figma</p>
-            <p className="text-2xl font-bold">OS</p>
-            <p className="mb-4 text-xl">Windows</p>
-          </div>
-        </div>
+        <Collapse.Root title="JavaScript">
+          <Collapse.Heading>Languages</Collapse.Heading>
+          <Collapse.Paragraph>TypeScript, JavaScript</Collapse.Paragraph>
+          <Collapse.Heading>Libraries</Collapse.Heading>
+          <Collapse.Paragraph>
+            Effector, tRPC, PrismaORM, Tanstack(React)Query
+          </Collapse.Paragraph>
+          <Collapse.Heading>WebGL</Collapse.Heading>
+          <Collapse.Paragraph>
+            Three.js, React Three fiber, Theatre.js, Rapier.js
+          </Collapse.Paragraph>
+          <Collapse.Heading>Tools</Collapse.Heading>
+          <Collapse.Paragraph>
+            Eslint-kit, Vite, T3-app, @neodx/svg
+          </Collapse.Paragraph>
+        </Collapse.Root>
+
+        <Collapse.Root title="Other">
+          <Collapse.Heading>Design</Collapse.Heading>
+          <Collapse.Paragraph>Figma, Blender</Collapse.Paragraph>
+          <Collapse.Heading>OS</Collapse.Heading>
+          <Collapse.Paragraph>Windows</Collapse.Paragraph>
+        </Collapse.Root>
       </ContentBlock>
     </Container>
   )

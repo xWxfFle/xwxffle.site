@@ -20,6 +20,7 @@ export const ContentBlock = ({
     <div
       className={clsx(
         'h-full w-full p-6 text-xl md:my-12 md:mb-40 lg:w-2/6',
+        !scene && 'lg:w-4/6',
         className,
       )}
     >
