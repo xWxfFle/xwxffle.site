@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { Scene } from '@/entities/scene'
 
 const LandingScene = dynamic(
-  () => import('./ui/background').then((mod) => mod.LandingScene),
+  () => import('./ui/landing-scene').then((mod) => mod.LandingScene),
   {
     ssr: false,
   },

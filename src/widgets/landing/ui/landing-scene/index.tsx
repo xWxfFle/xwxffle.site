@@ -1,3 +1,5 @@
+'use client'
+
 import { ContactShadows } from '@react-three/drei'
 import { getProject } from '@theatre/core'
 import { SheetProvider } from '@theatre/r3f'

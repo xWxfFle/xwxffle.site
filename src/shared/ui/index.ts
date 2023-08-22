@@ -1,4 +1,5 @@
 export * from './assets/models'
+export * from './container'
 export * from './footer'
 export * from './layout'
 export * from './loader'

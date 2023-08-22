@@ -2,15 +2,36 @@
 'use client'
 
 import { Float, MeshWobbleMaterial, Text3D } from '@react-three/drei'
+import { ContentBlock } from '@/entities/content-block'
 import { Scene } from '@/entities/scene'
+import { Container } from '@/shared/ui'
+
+const SkillsScene = () => (
+  <Scene grid position={[0, 0, 5]}>
+    <Float>
+      <Text3D
+        position={[-2.5, 0, -1]}
+        curveSegments={32}
+        bevelEnabled
+        bevelSize={0.04}
+        bevelThickness={0.1}
+        height={0.5}
+        lineHeight={0.5}
+        letterSpacing={-0.06}
+        size={1}
+        font="/fonts/Rammetto_One_Regular.json"
+      >
+        {`hello\nworld`}
+        <MeshWobbleMaterial color="#F4B857" factor={0.5} />
+      </Text3D>
+    </Float>
+  </Scene>
+)
 
 export const Skills = () => {
   return (
-    <div className="mx-auto flex w-full flex-col flex-wrap items-start justify-center bg-base-200 md:flex-row-reverse">
-      <div className="h-full w-full p-6 md:my-12 md:mb-40 lg:w-2/6">
-        <p className="mb-4 font-rammeto text-xl uppercase">02</p>
-        <h2 className="mb-4 text-4xl font-bold leading-tight">My stack</h2>
-
+    <Container className="md:flex-row-reverse">
+      <ContentBlock title="My stack" subtitle="02" scene={<SkillsScene />}>
         <div
           tabIndex={0}
           className="collapse-plus rounded-box collapse my-4  bg-base-100  shadow-xl"
@@ -66,28 +87,7 @@ export const Skills = () => {
             <p className="mb-4 text-xl">Windows</p>
           </div>
         </div>
-      </div>
-      <div className="mb-12 h-96  w-full px-6 md:my-12 lg:w-2/6">
-        <Scene grid position={[0, 0, 5]}>
-          <Float>
-            <Text3D
-              position={[-2.5, 0, -1]}
-              curveSegments={32}
-              bevelEnabled
-              bevelSize={0.04}
-              bevelThickness={0.1}
-              height={0.5}
-              lineHeight={0.5}
-              letterSpacing={-0.06}
-              size={1}
-              font="/fonts/Rammetto_One_Regular.json"
-            >
-              {`hello\nworld`}
-              <MeshWobbleMaterial color="#F4B857" factor={0.5} />
-            </Text3D>
-          </Float>
-        </Scene>
-      </div>
-    </div>
+      </ContentBlock>
+    </Container>
   )
 }
