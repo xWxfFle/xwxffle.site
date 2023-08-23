@@ -1,4 +1,5 @@
 'use client'
+
 import dynamic from 'next/dynamic'
 import { Scene } from '@/entities/scene'
 
@@ -11,7 +12,7 @@ const LandingScene = dynamic(
 
 export const Landing = () => {
   return (
-    <>
+    <div className="w-full h-screen">
       <div className="hero h-1/2 lg:h-1/3 items-end">
         <div className=" hero-content w-full flex-col items-start justify-center">
           <h3 className="text-xl uppercase">Hello, my name is</h3>
@@ -30,6 +31,6 @@ export const Landing = () => {
           <LandingScene />
         </Scene>
       </div>
-    </>
+    </div>
   )
 }

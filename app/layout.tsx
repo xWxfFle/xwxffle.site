@@ -68,10 +68,7 @@ const MetaLinks = () => (
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html
-      lang="en"
-      className={`antialiased ${nunito.variable} ${rammetto.variable}`}
-    >
+    <html lang="en" className={`${nunito.variable} ${rammetto.variable}`}>
       <MetaLinks />
       <body>
         <Layout>{children}</Layout>

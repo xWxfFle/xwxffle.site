@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 'use client'
 
 import { Float, MeshWobbleMaterial, Text3D } from '@react-three/drei'
