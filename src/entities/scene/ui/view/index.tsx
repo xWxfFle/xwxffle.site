@@ -14,7 +14,7 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react'
-import { r3f } from '@/shared/lib/r3f'
+import { r3f } from '@/shared/lib'
 
 export const Common = ({
   color,

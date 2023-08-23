@@ -13,12 +13,13 @@ const Common = dynamic(() => import('./ui/view').then((mod) => mod.Common), {
 
 type Props = PropsWithChildren & {
   grid?: boolean
+  orbit?: boolean
   fov?: number
   position?: Vector3
 }
 
-export const Scene = ({ children, grid, fov, position }: Props) => (
-  <View className="h-full w-full">
+export const Scene = ({ children, grid, fov, position, orbit }: Props) => (
+  <View className="h-full w-full" orbit={orbit}>
     {children}
     {grid && (
       // eslint-disable-next-line react/no-unknown-property
