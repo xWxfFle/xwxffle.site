@@ -2,7 +2,7 @@
 
 import Lenis from '@studio-freight/lenis'
 import dynamic from 'next/dynamic'
-import { PropsWithChildren, useRef } from 'react'
+import { PropsWithChildren, useEffect, useRef } from 'react'
 
 type Props = PropsWithChildren
 
@@ -12,15 +12,16 @@ const Canvas = dynamic(() => import('@/shared/lib/r3f/canvas'), {
 
 export const Layout = ({ children }: Props) => {
   const ref = useRef<HTMLDivElement>(null)
-  const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis()
 
-  function raf(time: number) {
-    lenis.raf(time)
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
     requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
-
+  })
   return (
     <div
       ref={ref}
