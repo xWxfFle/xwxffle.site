@@ -14,7 +14,7 @@ const ReactLogo = dynamic(
 )
 
 const AboutScene = () => (
-  <Scene grid position={[0, 0, 5]} orbit>
+  <Scene grid position={[0, 0, 5]}>
     <ReactLogo />
   </Scene>
 )

@@ -6,7 +6,7 @@ import { Scene } from '@/entities/scene'
 import { Collapse, Container } from '@/shared/ui'
 
 const SkillsScene = () => (
-  <Scene grid position={[0, 0, 5]} orbit>
+  <Scene grid position={[0, 0, 5]}>
     <Float>
       <Text3D
         position={[-2.5, 0, -1]}
