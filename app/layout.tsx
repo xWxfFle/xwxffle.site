@@ -18,7 +18,7 @@ const rammetto = Rammetto_One({
 
 const title = 'Arseniy Filatov • Frontend developer'
 const description =
-  'I`m a 18 y.o. frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.'
+  'I`m a frontend developer. I use Next.js for project development and also enjoy creating WebGL apps using Three.js and R3F.'
 
 export const metadata: Metadata = {
   title,
