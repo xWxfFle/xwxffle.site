@@ -1,28 +1,5 @@
 import clsx from 'clsx'
-import { HTMLAttributes, ReactNode } from 'react'
-
-interface RootProps extends HTMLAttributes<HTMLDivElement> {
-  title: string
-  className?: string
-  children: ReactNode
-}
-
-const Root = ({ title, children, className, ...rest }: RootProps) => (
-  <div
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    tabIndex={0}
-    className={clsx(
-      'collapse-plus rounded-box collapse my-4 bg-base-100 shadow-xl',
-      className,
-    )}
-    {...rest}
-  >
-    <div className="collapse-title inline-flex items-center text-xl">
-      <h2>{title}</h2>
-    </div>
-    <div className="collapse-content">{children}</div>
-  </div>
-)
+import { HTMLAttributes } from 'react'
 
 interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   className?: string
@@ -52,8 +29,7 @@ const Heading = ({ className, style, children, ...rest }: HeadingProps) => {
   )
 }
 
-export const Collapse = {
-  Root,
+export const Typography = {
   Paragraph,
   Heading,
 }

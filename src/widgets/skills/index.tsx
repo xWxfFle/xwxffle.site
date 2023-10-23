@@ -3,7 +3,7 @@
 import { Float, MeshWobbleMaterial, Text3D } from '@react-three/drei'
 import { ContentBlock } from '@/entities/content-block'
 import { Scene } from '@/entities/scene'
-import { Collapse, Container } from '@/shared/ui'
+import { Container, Typography } from '@/shared/ui'
 
 const SkillsScene = () => (
   <Scene grid position={[0, 0, 5]}>
@@ -31,38 +31,20 @@ export const Skills = () => {
   return (
     <Container className="md:flex-row-reverse">
       <ContentBlock title="My stack" subtitle="02" scene={<SkillsScene />}>
-        <Collapse.Root title="HTML / CSS">
-          <Collapse.Heading>Frameworks</Collapse.Heading>
-          <Collapse.Paragraph>Tailwind, Typewind</Collapse.Paragraph>
-          <Collapse.Heading>Libraries</Collapse.Heading>
-          <Collapse.Paragraph>
-            daisyUI, shadcnUI, RadixUI, cva, clsx
-          </Collapse.Paragraph>
-        </Collapse.Root>
-
-        <Collapse.Root title="JavaScript">
-          <Collapse.Heading>Languages</Collapse.Heading>
-          <Collapse.Paragraph>TypeScript, JavaScript</Collapse.Paragraph>
-          <Collapse.Heading>Libraries</Collapse.Heading>
-          <Collapse.Paragraph>
-            Effector, tRPC, PrismaORM, Tanstack(React)Query
-          </Collapse.Paragraph>
-          <Collapse.Heading>WebGL</Collapse.Heading>
-          <Collapse.Paragraph>
-            Three.js, React Three fiber, Theatre.js, Rapier.js
-          </Collapse.Paragraph>
-          <Collapse.Heading>Tools</Collapse.Heading>
-          <Collapse.Paragraph>
-            Eslint-kit, Vite, T3-app, @neodx/svg
-          </Collapse.Paragraph>
-        </Collapse.Root>
-
-        <Collapse.Root title="Other">
-          <Collapse.Heading>Design</Collapse.Heading>
-          <Collapse.Paragraph>Figma, Blender</Collapse.Paragraph>
-          <Collapse.Heading>OS</Collapse.Heading>
-          <Collapse.Paragraph>Windows</Collapse.Paragraph>
-        </Collapse.Root>
+        <Typography.Heading>Frameworks & libraries</Typography.Heading>
+        <Typography.Paragraph>
+          React, Next.js, Effector, Atomic router, tRPC, PrismaORM
+        </Typography.Paragraph>
+        <Typography.Heading>WebGL</Typography.Heading>
+        <Typography.Paragraph>
+          Three.js, React Three fiber, Theatre.js, Rapier.js
+        </Typography.Paragraph>
+        <Typography.Heading>Styling</Typography.Heading>
+        <Typography.Paragraph>
+          Tailwind, daisyUI, shadcnUI, RadixUI, Mantine, cva
+        </Typography.Paragraph>
+        <Typography.Heading>Other</Typography.Heading>
+        <Typography.Paragraph>FSD, Eslint-kit, @neodx/svg</Typography.Paragraph>
       </ContentBlock>
     </Container>
   )
