@@ -1,6 +1,6 @@
 export * from './assets/models'
-export * from './collapse'
 export * from './container'
 export * from './footer'
 export * from './layout'
 export * from './loader'
+export * from './typography'
