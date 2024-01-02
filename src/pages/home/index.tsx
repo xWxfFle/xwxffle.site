@@ -2,7 +2,6 @@
 import { Footer } from '@/shared/ui'
 import { About } from '@/widgets/about'
 import { Landing } from '@/widgets/landing'
-import { Projects } from '@/widgets/projects'
 import { Skills } from '@/widgets/skills'
 
 const HomePage = () => {
@@ -11,7 +10,6 @@ const HomePage = () => {
       <Landing />
       <About />
       <Skills />
-      <Projects />
       <Footer />
     </>
   )
