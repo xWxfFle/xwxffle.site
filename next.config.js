@@ -12,14 +12,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig = {
-  // uncomment the following snippet if using styled components
-  // compiler: {
-  //   styledComponents: true,
-  // },
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  experimental: {
-    appDir: true,
-  },
   images: {},
   webpack(config, { isServer }) {
     // audio support

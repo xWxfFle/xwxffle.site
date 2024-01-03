@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 }
 
 export const ReactLogo = (props: JSX.IntrinsicElements['group']) => {
-  const { nodes } = useGLTF('/models/react-logo.gltf') as GLTFResult
+  const { nodes } = useGLTF('/models/react-logo.gltf') as unknown as GLTFResult
   const mesh = useRef<THREE.Group>(null)
   useFrame(() => {
     if (!mesh.current) return

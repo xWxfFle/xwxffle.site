@@ -5,7 +5,9 @@ export const Footer = () => {
       className="footer footer-center bg-base-300 p-10 text-primary-content"
     >
       <div>
-        <p className="text-xl font-bold">Check out my Github for projects ;)</p>
+        <p className="text-xl font-bold">
+          Check out my Github for more projects
+        </p>
       </div>
       <div className="grid grid-flow-col gap-4">
         <a href="https://github.com/xWxfFle" target="_blank">

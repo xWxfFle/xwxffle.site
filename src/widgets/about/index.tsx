@@ -24,11 +24,11 @@ export const About = () => {
     <Container>
       <ContentBlock subtitle="01" title="About me" scene={<AboutScene />}>
         <p className="mb-8  leading-normal">
-          I`m from Rostov-on-Don, Russia. Now I live in St. Petersburg and study
-          at ITMO University. I started my career in 2021 as a trainee Node.js
-          developer for a company working on blockchain apps. These days I work
-          as a frontend developer. Also like creating WebGL applications using
-          Three.js and React Three Fiber.
+          I`m frontend developer from Rostov-on-Don, Russia. Now I live in St.
+          Petersburg and study at ITMO University. I started my career in 2021
+          as a trainee Node.js developer for a company working on blockchain
+          apps. These days I work as a frontend developer. Also like creating
+          WebGL applications using Three.js and React Three Fiber.
         </p>
       </ContentBlock>
     </Container>
